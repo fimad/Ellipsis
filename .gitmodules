@@ -12,4 +12,4 @@
 	url = https://github.com/xolox/vim-session.git
 [submodule ".xmonad"]
 	path = .xmonad
-	url = github.com:fimad/xmonad-config.git
+	url = git@github.com:fimad/xmonad-config.git

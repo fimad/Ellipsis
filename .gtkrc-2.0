@@ -1,0 +1,12 @@
+# -- THEME AUTO-WRITTEN BY gtk-theme-switch2 DO NOT EDIT
+include "/home/will/.themes/SolarizedLight/gtk-2.0/gtkrc"
+
+style "user-font"
+{
+  font_name="Helvetica 11"
+}
+widget_class "*" style "user-font"
+
+include "/home/will/.gtkrc-2.0.mine"
+
+# -- THEME AUTO-WRITTEN BY gtk-theme-switch2 DO NOT EDIT

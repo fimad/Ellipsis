@@ -31,6 +31,7 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set textwidth=80
 
 " toggle paste mode (to paste properly indented text)
 nnoremap <F2> :set invpaste paste?<CR>

@@ -11,7 +11,7 @@
     cursor_color = "#eee8d5"
     foreground_color = "#eee8d5"
     show_titlebar = False
-    font = Inconsolata Medium 16
+    font = Inconsolata Medium 18
     background_color = "#002b36"
 [layouts]
   [[default]]

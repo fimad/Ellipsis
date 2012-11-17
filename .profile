@@ -16,9 +16,20 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# set PATH so it includes user's private bin if it exists
+# set PATH so it includes user's private bin if it exists, and all of it's
+# subdirectories also
 if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin/tor-browser_en-US:$HOME/bin/x:$HOME/bin/net:$HOME/bin/hacking:$HOME/bin:$HOME/Coding/android-sdk-linux/platform-tools:$HOME/Coding/android-sdk-linux/tools:$PATH"
+  # find all directories in $HOME/bin, follow symbolic links ignore dot files
+  directories=`find -L $HOME/bin/ -type d | egrep -v '/\.'`
+  for d in $directories
+  do
+    # Add the directory to the path if there are any executable files in it
+    binaries=`ls -lA $d | egrep '^[rwxs\-]*x[rwxs\-]* ' | egrep -v '\.so(.[0-9]+)*$'`
+    if [ -n "$binaries" ]
+    then
+      PATH="$d:$PATH"
+    fi
+  done
 fi
 
 [[ -s "/home/will/.rvm/scripts/rvm" ]] && source "/home/will/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

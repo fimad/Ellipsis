@@ -3,7 +3,7 @@ include "/home/will/.themes/SolarizedLight/gtk-2.0/gtkrc"
 
 style "user-font"
 {
-  font_name="Helvetica 11"
+  font_name="Helvetica 12"
 }
 widget_class "*" style "user-font"
 

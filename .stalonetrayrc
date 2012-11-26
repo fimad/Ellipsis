@@ -1,7 +1,7 @@
 background "#002b36"
 
 #geometry 72x25-0+0
-geometry 4x1-1280+0
+geometry 4x1-0+0
 max_geometry 4x1
 icon_size 18
 #ignore_icon_resize true

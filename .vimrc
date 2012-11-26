@@ -1,6 +1,7 @@
 " Fuck vi
 set nocompatible
 
+let g:pathogen_disabled = ['AutoClose', 'autoclose']
 call pathogen#infect()
 
 " Make me beautiful

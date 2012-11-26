@@ -1,0 +1,9 @@
+[user]
+	name = Will Coster
+	email = willcoster@gmail.com
+[github]
+	user = fimad
+[core]
+	editor = vim
+[color]
+	ui = auto

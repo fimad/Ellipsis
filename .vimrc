@@ -10,6 +10,11 @@ set background=dark
 let g:solarized_contrast="medium"
 colorscheme solarized
 
+" auto cd to the current dir as the file
+"set autochdir
+
+let g:clipbrdDefaultReg = '+'
+
 set spell
 set spelllang=en
 
@@ -57,3 +62,4 @@ nnoremap ; :
 
 "nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
 nnoremap <f12> :!ctags -R --c-kinds=+degmnstvf --c++-kinds=+cdefgmnstuv --java-kinds=+cefgimp<cr>
+nnoremap <f8> :!pdflatex "%"<cr>

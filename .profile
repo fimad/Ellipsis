@@ -16,6 +16,8 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+export MPD_HOST=multivac.wc
+
 # set PATH so it includes user's private bin if it exists, and all of it's
 # subdirectories also
 if [ -d "$HOME/bin" ] ; then

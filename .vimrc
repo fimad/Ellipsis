@@ -30,6 +30,9 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 
+" Reuse open tabs when switching buffers
+set switchbuf=usetab,newtab
+
 set cindent
 set copyindent
 set smartindent
@@ -62,4 +65,5 @@ nnoremap ; :
 
 "nnoremap <silent><Leader><C-]> <C-w><C-]><C-w>T
 nnoremap <f12> :!ctags -R --c-kinds=+degmnstvf --c++-kinds=+cdefgmnstuv --java-kinds=+cefgimp<cr>
-nnoremap <f8> :!pdflatex "%"<cr>
+nnoremap <f8> :!make<cr>
+nnoremap <f7> :!pdflatex "%"<cr>

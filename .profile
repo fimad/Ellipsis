@@ -26,7 +26,7 @@ if [ -d "$HOME/bin" ] ; then
   for d in $directories
   do
     # Add the directory to the path if there are any executable files in it
-    binaries=`ls -lA $d | egrep '^[rwxs\-]*x[rwxs\-]* ' | egrep -v '\.so(.[0-9]+)*$'`
+    binaries=`ls -lA "$d/" | egrep '^[rwxs\-]*x[rwxs\-]* ' | egrep -v '\.so(.[0-9]+)*$'`
     if [ -n "$binaries" ]
     then
       PATH="$d:$PATH"

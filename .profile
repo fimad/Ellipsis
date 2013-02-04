@@ -22,7 +22,7 @@ export MPD_HOST=multivac.wc
 # subdirectories also
 if [ -d "$HOME/bin" ] ; then
   # find all directories in $HOME/bin, follow symbolic links ignore dot files
-  directories=`find -L $HOME/bin/ -type d | egrep -v '/\.'`
+  directories=`find -L $HOME/bin/ -maxdepth 3 -type d | egrep -v '/\.'`
   for d in $directories
   do
     # Add the directory to the path if there are any executable files in it

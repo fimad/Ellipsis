@@ -33,5 +33,6 @@ if [ -d "$HOME/bin" ] ; then
     fi
   done
 fi
+PATH="~/.cabal/bin:$PATH"
 
 [[ -s "/home/will/.rvm/scripts/rvm" ]] && source "/home/will/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

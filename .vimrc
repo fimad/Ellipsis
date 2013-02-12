@@ -38,8 +38,8 @@ set copyindent
 set smartindent
 set autoindent
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set textwidth=80
 
 " toggle paste mode (to paste properly indented text)

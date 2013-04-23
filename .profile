@@ -17,22 +17,26 @@ if [ -n "$BASH_VERSION" ]; then
 fi
 
 export MPD_HOST=multivac.wc
+export HTML_HUD="$HOME/bin/HtmlHud"
 
 # set PATH so it includes user's private bin if it exists, and all of it's
 # subdirectories also
 if [ -d "$HOME/bin" ] ; then
-  # find all directories in $HOME/bin, follow symbolic links ignore dot files
-  directories=`find -L $HOME/bin/ -maxdepth 3 -type d | egrep -v '/\.'`
-  for d in $directories
-  do
-    # Add the directory to the path if there are any executable files in it
-    binaries=`ls -lA "$d/" | egrep '^[rwxs\-]*x[rwxs\-]* ' | egrep -v '\.so(.[0-9]+)*$'`
-    if [ -n "$binaries" ]
-    then
-      PATH="$d:$PATH"
-    fi
-  done
+    # find all directories in $HOME/bin, follow symbolic links ignore dot files
+    directories=`find -L $HOME/bin/ -maxdepth 3 -type d | egrep -v '/\.'`
+    for d in $directories
+    do
+        #Make sure the thing we are getting is a path, if it isn't then there was
+        #probably a space, in which case we also probably don't care :P
+        if [ -d "$d" ]; then
+            # Add the directory to the path if there are any executable files in it
+            binaries=`ls -lA "$d/" | egrep '^[rwxs\-]*x[rwxs\-]* ' | egrep -v '\.so(.[2-9]+)*$'`
+            if [ -n "$binaries" ]; then
+              PATH="$d:$PATH"
+            fi
+        fi
+    done
 fi
-PATH="~/.cabal/bin:$PATH"
+PATH="$HOME/.cabal/bin:$PATH"
 
 [[ -s "/home/will/.rvm/scripts/rvm" ]] && source "/home/will/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -10,6 +10,13 @@ set background=dark
 let g:solarized_contrast="medium"
 colorscheme solarized
 
+
+au FileType haskell nnoremap <buffer> <F1> :HdevtoolsType<CR>
+au FileType haskell nnoremap <buffer> <silent> <F2> :HdevtoolsClear<CR>
+
+"let g:syntastic_check_on_open=1
+let g:syntastic_quiet_warnings=0
+
 " auto cd to the current dir as the file
 "set autochdir
 

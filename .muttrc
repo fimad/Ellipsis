@@ -1,0 +1,74 @@
+source .mutt-colors-solarized-dark-16.muttrc
+
+set my_password=`gpg -d .muttrc-willcoster-password`
+
+# Change the following six lines to match your Gmail account details
+set imap_user = "willcoster@gmail.com"
+set imap_pass = $my_password
+ 
+set smtp_url = "smtp://willcoster@gmail.com@smtp.gmail.com:587/"
+set smtp_pass = $my_password
+ 
+set realname = "Will Coster"
+set from = "willcoster@gmail.com"
+ 
+# Change the following line to a different editor you prefer.
+set editor = "vim"
+ 
+# Basic config, you can leave this as is
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set imap_check_subscribed
+set hostname = gmail.com
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+set postponed = "+[Gmail]/Drafts"
+set record = "Sent"
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+set move = no
+set include
+set auto_tag = yes
+ignore "Authentication-Results:"
+ignore "DomainKey-Signature:"
+ignore "DKIM-Signature:"
+hdr_order Date From To Cc
+alternative_order text/plain text/html *
+auto_view text/html
+bind editor <Tab> complete-query
+bind editor ^T complete
+
+# Sort my inbox in a reasonable way
+set sort = 'threads'
+set sort_aux = 'reverse-score'
+set strict_threads = yes
+folder-hook . set sort_aux=reverse-date-received
+folder-hook INBOX set sort_aux=reverse-score
+
+#Scoring is kinda funky, if you sort normall all of the dates are backwards and
+#there is no way that I am aware of to add a third sorting method. The solution
+#is to reverse sort...
+score "~A" 15 #All Mail
+score "~N" -8 #Brand New
+score "~O" -4 #New, but we've seen it before
+#score "~p" -2 #addressed to me!
+score "~F" -1 #Flagged
+ 
+# Vim style pager bindings
+macro pager j "<next-line>" "Scroll down"
+macro pager k "<previous-line>" "Scroll up"
+macro index,pager \Cu "<previous-page>" "page up"
+macro index,pager \Cd "<next-page>" "page up"
+macro index,pager gg "<first-entry>" "goto top"
+macro index,pager G "<last-entry>" "goto bottom"
+
+# Gmail-style keyboard shortcuts
+macro index,pager y "<enter-command>unset trash<enter><delete-message>i" "Gmail archive message"
+macro index,pager d "<enter-command>set trash=\"imaps://imap.googlemail.com/[GMail]/Bin\"<enter><delete-message>i" "Gmail delete message"
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index,pager ga "<change-folder>=[Gmail]/All<quote-char> Mail<enter>" "Go to all mail"
+macro index,pager gs "<change-folder>=[Gmail]/Starred<enter>" "Go to starred messages"
+macro index,pager gp "<change-folder>=[Gmail]/Important<enter>" "Go to priority inbox"
+macro index,pager gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"

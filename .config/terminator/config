@@ -46,6 +46,7 @@
     show_titlebar = False
     font = Inconsolata Medium 14
     background_color = "#002b36"
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]

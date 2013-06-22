@@ -22,6 +22,7 @@ set imap_check_subscribed
 set hostname = gmail.com
 set mail_check = 120
 set timeout = 300
+set sleep_time = 0
 set imap_keepalive = 300
 set postponed = "+[Gmail]/Drafts"
 set record = "Sent"

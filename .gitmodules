@@ -4,3 +4,6 @@
 [submodule ".xmonad"]
 	path = .xmonad
 	url = git@github.com:fimad/xmonad-config.git
+[submodule "bin/Scripture"]
+	path = bin/Scripture
+	url = git@github.com:fimad/Scripture.git

@@ -44,7 +44,7 @@
     cursor_color = "#eee8d5"
     foreground_color = "#eee8d5"
     show_titlebar = False
-    font = Inconsolata Medium 14
+    font = Inconsolata Medium 10
     background_color = "#002b36"
     scrollback_infinite = True
 [layouts]

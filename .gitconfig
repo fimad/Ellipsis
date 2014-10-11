@@ -9,3 +9,27 @@
 	ui = auto
 [push]
 	default = simple
+[alias]
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    le = log --oneline --decorate
+    filelog = log -u
+    fl = log -u
+    dl = "!git ll -1"
+    dlc = diff --cached HEAD^
+    la = "!git config -l | grep alias | cut -c 7-"
+    st = status
+    logtree = log --graph --oneline --decorate --all
+    cl = clone
+    ci = commit
+    co = checkout
+    br = branch
+    diff = diff --word-diff
+    dc = diff --cached
+    mmerge = merge --no-ff
+    shoot = push origin --delete #delete remote branch
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[http]
+	sslCAInfo = /etc/nginx/ssl/subdomains.crt

@@ -24,7 +24,7 @@ export GRADLE_HOME="$HOME/Code/gradle/gradle-1.11"
 # set PATH so it includes user's private bin if it exists, and all of it's
 # subdirectories also
 if [ -d "$HOME/bin" ] ; then
-    BIN_DIRS=("$HOME/bin/" "$HOME/Code/android/sdk/")
+    BIN_DIRS="$HOME/bin/"
     # find all directories in $HOME/bin, follow symbolic links ignore dot files
     directories=`find -L $BIN_DIRS -maxdepth 3 -type d | egrep -v '/\.'`
     for d in $directories

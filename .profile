@@ -42,6 +42,12 @@ if [ -d "$HOME/bin" ] ; then
         fi
     done
 fi
-PATH="$HOME/.cabal/bin:$GRADLE_HOME/bin:$PATH"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$GRADLE_HOME/bin:/usr/local/go/bin:$PATH
+export PATH=$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH
 
 #[[ -s "/home/will/.rvm/scripts/rvm" ]] && source "/home/will/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

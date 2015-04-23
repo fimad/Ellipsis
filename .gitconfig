@@ -31,5 +31,5 @@
     shoot = push origin --delete #delete remote branch
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-[http]
-	sslCAInfo = /etc/nginx/ssl/subdomains.crt
+#[http]
+#	sslCAInfo = /etc/nginx/ssl/subdomains.crt

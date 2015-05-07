@@ -2,11 +2,13 @@
 ! Xft settings
 !-------------------------------------------------------------------------------
 
-Xft.dpi:                    96
-Xft.antialias:              true
-Xft.rgba:                   rgb
-Xft.hinting:                true
-Xft.hintstyle:              full
+! Xft.dpi:                    96
+! Xft.antialias:              true
+! Xft.rgba:                   rgb
+! Xft.hinting:                true
+! Xft.hintstyle:              full
+
+dzen2*font: -*-terminus for powerline-*-r-*-*-*-*-*-*-*-*-*-*
 
 !-------------------------------------------------------------------------------
 ! URxvt settings
@@ -17,25 +19,16 @@ Xft.hintstyle:              full
 
 URxvt.depth:                32
 URxvt.geometry:             90x30
-URxvt.transparent:          true
+URxvt.transparent:          false
 URxvt.fading:               0
-! URxvt.urgentOnBell:         true
-! URxvt.visualBell:           true
 URxvt.loginShell:           true
 URxvt.saveLines:            4096
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
 ! Fonts
-URxvt.allow_bold:           false
-! URxvt*font:                 xft:SourceCodePro:pixelsize=12
-! URxvt*boldFont:             xft:SourceCodePro:Semibold:pixelsize=12
-URxvt*font:                 xft:Inconsolata:pixelsize=14, \
-                            xft:PowerlineSymbols:pixelsize=14:antialias=true:hinting=slight, \
-                            xft:Symbola:pixelsize=14:antialias=true:hinting=slight
-!URxvt*boldFont:             xft:Inconsolata:Semibold:pixelsize=14, \
-!                            xft:PowerlineSymbols:pixelsize=14:antialias=true:hinting=slight, \
-!                            xft:Symbola:pixelsize=14:antialias=true:hinting=slight
+URxvt.font: xft:Inconsolata for Powerline:size=13:antialias=true:hinting=full, \
+            xft:Symbola:style=Regular
 
 ! Fix font space
 ! URxvt*letterSpace: -1
@@ -45,13 +38,13 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Perl extensions
-URxvt.perl-ext-common:      default,matcher,clipboard
+URxvt.perl-ext-common:      default,matcher,clipboard-osc
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          google-chrome
 URxvt.url-launcher:         google-chrome
 
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard-osc:paste
+URxvt.keysym.Shift-Control-C: perl:clipboard-osc:copy
 URxvt.iso14755: False
 
 ! Cursor

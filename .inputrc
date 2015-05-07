@@ -1,5 +1,7 @@
 "\eOD": backward-word
 "\eOC": forward-word
+"\eOd": backward-word
+"\eOc": forward-word
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
 "\e[5C": forward-word

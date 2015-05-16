@@ -45,6 +45,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$GRADLE_HOME/bin:/usr/local/go/bin:$PATH
 export PATH=$HOME/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH
+export PATH=$HOME/.xmonad/bin:$PATH
 
 #[[ -s "/home/will/.rvm/scripts/rvm" ]] && source "/home/will/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 

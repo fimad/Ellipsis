@@ -28,7 +28,7 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.font: xft:Inconsolata for Powerline:size=13:antialias=true:hinting=full, \
-            xft:Symbola:style=Regular
+            xft:Symbola:style=Regular:size=13:antialias=true:hinting=full
 
 ! Fix font space
 ! URxvt*letterSpace: -1

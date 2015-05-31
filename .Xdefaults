@@ -26,6 +26,8 @@ URxvt.saveLines:            4096
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 
+urxvt.cutchars:             '│`()\'*<>[]{|}"'
+
 ! Fonts
 URxvt.font: xft:Inconsolata for Powerline:size=13:antialias=true:hinting=full, \
             xft:Symbola:style=Regular:size=13:antialias=true:hinting=full

@@ -9,3 +9,7 @@ alias hexencode='hexdump -v -e '"'"'"\\\x"'"'"' -e '"'"'/1 "%02x"'"'"''
 alias hexquote='( hexdump -v -e '"'"'18/1 "x%02X"'"'"' -e '"'"'"\n"'"'"' | sed "s/x  //g" | sed "s/x/\\\\x/g" | sed -r "s/^|$/\"/g" )'
 
 alias rop=~/Code/ROPgadget/ROPgadget.py
+
+alias chrome-proxy='google-chrome --user-data-dir=~/.chrome-proxy --proxy-server=localhost:8888'
+alias chrome-proxy-remote='google-chrome --user-data-dir=~/.chrome-proxy --proxy-server=localhost:8889'
+
